@@ -9,8 +9,8 @@ server.use(cors({
     origin: "https://test.smartmetatec.com"
 }))
 
-server.get("/:message", (req, res) => {
-    res.send(`${req.params.message}`)
+server.get("/api", (req, res) => {
+    res.send(`Hello, world`)
 })
 
 
