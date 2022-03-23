@@ -9,8 +9,8 @@ const server = express()
     // origin: "https://test.smartmetatec.com"
 // }))
 
-server.get("/", (req, res) => {
-    res.send(`Hello, world`)
+server.get("/api", (req, res) => {
+    res.json({test: "The test passed"})
 })
 
 
