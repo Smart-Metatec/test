@@ -4,16 +4,14 @@ require("dotenv").config()
 
 const server = express()
 
-// server.use(cors({
-    // credentials: true,
-    // origin: "https://test.smartmetatec.com"
-// }))
+server.use(cors({
+    credentials: true,
+    origin: "*"
+}))
 
 server.get("/api", (req, res) => {
     res.json({test: "The test passed"})
 })
 
 
-server.listen(0, (req, res) => {
-    console.log("Server is running on port")
-})
+server.listen()
